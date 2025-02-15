@@ -1,6 +1,8 @@
+// src/components/Menu.jsx
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faEnvelope, faClock, faComment } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";  // Utilisation de Link pour la navigation
 
 const Menu = () => {
   return (
@@ -17,9 +19,10 @@ const Menu = () => {
           </a>
         </li>
         <li>
-          <a href="/timer">
+          {/* Lien vers la page Timer */}
+          <Link to="/timer">
             <FontAwesomeIcon icon={faClock} /> 
-          </a>
+          </Link>
         </li>
         <li>
           <a href="/comments">

@@ -1,0 +1,73 @@
+/* Global styles */
+body {
+    background-color: #fef6f7; /* Un fond doux de couleur rose pâle */
+    font-family: 'Poppins', sans-serif; /* Police moderne et élégante */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .timer-header {
+    font-size: 2.5rem;
+    color: #f28d8d; /* Couleur douce et chaleureuse */
+    margin-bottom: 20px;
+  }
+  
+  .timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4d4d; /* Couleur rose pour le timer */
+    background: rgba(255, 77, 77, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+    display: inline-block;
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .timer:hover {
+    transform: scale(1.1); /* Légère animation pour un effet dynamique */
+  }
+  
+  .timer span {
+    font-size: 1.5rem;
+    color: #f9c5d1; /* Couleur douce pour les chiffres */
+  }
+  
+  .date {
+    font-size: 1.2rem;
+    color: #c4a7b3;
+    margin-top: 20px;
+  }
+  
+  .date span {
+    font-weight: bold;
+    color: #ff7a7a; /* Accent rose sur la date */
+  }
+  
+  .timer-container a {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #ff4d4d;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timer-container a:hover {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
