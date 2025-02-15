@@ -1,21 +1,72 @@
+/* Galerie */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
+  height: 400px;
+  position: relative;
 }
 
-.image-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Style de chaque image */
+.image-item {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  opacity: 0.9;
 }
 
-.image-item img:hover {
-  transform: scale(1.1); /* Zoom sur l'image au survol */
+/* Réduction de la taille des images */
+.image-item img {
+  width: 60px; /* Réduit la taille des images */
+  height: 60px; /* Réduit la taille des images */
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Disposition des images en forme de cœur */
+.image-item:nth-child(1) {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+}
+
+.image-item:nth-child(2) {
+  top: 20%;
+  left: 15%;
+  transform: translateX(-50%) scale(0.8);
+}
+
+.image-item:nth-child(3) {
+  top: 20%;
+  left: 85%;
+  transform: translateX(-50%) scale(0.8);
+}
+
+.image-item:nth-child(4) {
+  top: 40%;
+  left: 30%;
+  transform: translateX(-50%) scale(0.9);
+}
+
+.image-item:nth-child(5) {
+  top: 40%;
+  left: 70%;
+  transform: translateX(-50%) scale(0.9);
+}
+
+.image-item:nth-child(6) {
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Effet de zoom discret au clic */
+.image-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Style pour l'image zoomée */
@@ -37,5 +88,10 @@
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.zoomed-image img:hover {
+  transform: scale(1.05); /* Effet léger d'agrandissement */
 }

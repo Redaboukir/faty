@@ -3,9 +3,12 @@ import React, { useState } from "react";
 const Gallery = () => {
   // Tableau des images
   const images = [
-    "/images/photo1.png",
+    "/images/photo1.jpg",
     "/images/photo2.jpg",
-    "/images/photo3.jpg"
+    "/images/photo3.jpg",
+    "/images/photo4.jpg",
+    "/images/photo5.jpg",
+    "/images/photo6.jpg"
   ];
 
   // État pour gérer l'image sélectionnée pour le zoom

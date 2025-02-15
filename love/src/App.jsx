@@ -4,6 +4,7 @@ import Menu from "./components/Menu";  // Assure-toi que le chemin est correct
 import Gallery from "./components/Gallery/Gallery";
 
 import TimerPage from "./components/Timer/TimerPage";  // Import de la page Timer
+import Mail from "./components/Mail/Mail";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/timer" element={<TimerPage />} />  {/* Ajout de la route Timer */}
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/Mail" element={<Mail />} />
 
 
     </Routes>

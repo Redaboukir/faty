@@ -6,7 +6,7 @@ const Timer = () => {
   const [timeElapsed, setTimeElapsed] = useState("");
 
   useEffect(() => {
-    const dateOfMeeting = new Date("2024-12-31T00:00:00");
+    const dateOfMeeting = new Date("2025-01-12T00:00:00");
     
     const updateTimer = () => {
       const now = new Date();
@@ -30,7 +30,7 @@ const Timer = () => {
       <div className="timer">
         <span>{timeElapsed}</span>
       </div>
-      <p className="date">Depuis le <span>31 décembre 2024</span></p>
+      <p className="date">Depuis le <span>12 janvier 2025</span></p>
       <a href="/menu">Retour au menu</a>
     </div>
   );

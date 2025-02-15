@@ -1,0 +1,65 @@
+.mail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    cursor: pointer;
+    flex-direction: column;
+  }
+  
+  .envelope {
+    transition: transform 0.5s ease-in-out;
+    width: 80px; /* Taille de l'enveloppe */
+    height: 80px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .envelope.open {
+    transform: rotateX(180deg); /* Rotation de l'enveloppe */
+  }
+  
+  .letter {
+    position: fixed; /* Positionne le carré blanc par rapport à l'écran */
+    top: 50%; /* Centré verticalement */
+    left: 50%; /* Centré horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste pour un centrage parfait */
+    width: 80vw; /* 80% de la largeur de l'écran */
+    max-width: 350px; /* Taille maximale pour les grands écrans */
+    max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de l'écran */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20px); /* Centré avec une translation pour l'animation */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+    padding-right: 10px; /* Pour ne pas couper le texte à droite quand il défile */
+  }
+  
+  .letter.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0); /* Position finale */
+  }
+  
+  .letter p {
+    line-height: 1.6; /* Espacement entre les lignes */
+    font-size: 1.2em; /* Taille de texte un peu plus grande */
+    color: #333;
+  }
+  
+  .letter p strong {
+    font-size: 1.4em;
+    color: #5a5a5a;
+  }
+  
+  .letter p[style] {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
