@@ -5,7 +5,7 @@ import NumericPad from "../components/NumericPad";
 export default function Login() {
   const [code, setCode] = useState("");
   const navigate = useNavigate();
-  const correctCode = "1234";
+  const correctCode = "2025";
 
   const handleClick = (num) => {
     if (code.length < 4) {
