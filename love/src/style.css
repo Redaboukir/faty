@@ -112,3 +112,64 @@ h2 {
     font-size: 1.5rem;
   }
 }
+/* Style pour la galerie */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  margin: 10px;
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le formulaire de téléchargement */
+.upload-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.upload-container input[type="file"] {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.upload-container input[type="file"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Prévisualisation d'image */
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .upload-container input[type="file"] {
+    padding: 8px;
+  }
+}
